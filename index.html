@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="NOCTAIL - 日常に、少しだけ特別な「好き」を。夜・月・猫・植物をモチーフにしたライフスタイルブランド。"
+  >
+
+  <meta
+    name="theme-color"
+    content="#090a10"
+  >
+
+  <title>
+    NOCTAIL | Life with a little darkness.
+  </title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/iconN1.png"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+  <!-- =========================================
+       LOADING
+  ========================================== -->
+
+  <div
+    class="loading-screen"
+    id="loadingScreen"
+  >
+    <div class="loading-inner">
+
+      <div class="loading-moon">
+        ☾
+      </div>
+
+      <p class="loading-logo">
+        NOCTAIL
+      </p>
+
+      <p class="loading-copy">
+        LIFE WITH A LITTLE DARKNESS.
+      </p>
+
+      <div class="loading-line">
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================
+       GLOBAL BACKGROUND
+  ========================================== -->
+
+  <div class="site-background"></div>
+
+  <div class="site-vignette"></div>
+
+  <div
+    class="star-field"
+    id="starField"
+  ></div>
+
+  <div
+    class="cursor-glow"
+    id="cursorGlow"
+  ></div>
+
+
+  <!-- =========================================
+       SCROLL PROGRESS
+  ========================================== -->
+
+  <div class="scroll-progress">
+    <span id="scrollProgress"></span>
+  </div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header
+    class="header"
+    id="header"
+  >
+
+    <div class="header-inner">
+
+      <a
+        href="#home"
+        class="logo"
+      >
+
+        <div class="logo-image-wrap">
+
+          <img
+            src="images/iconN1.png"
+            alt="NOCTAIL"
+          >
+
+        </div>
+
+        <div class="logo-copy">
+
+          <span class="logo-main">
+            NOCTAIL
+          </span>
+
+          <span class="logo-sub">
+            LIFE WITH A LITTLE DARKNESS.
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <nav class="desktop-nav">
+
+        <a href="#about">
+          ABOUT
+        </a>
+
+        <a href="#collection">
+          COLLECTION
+        </a>
+
+        <a href="#items">
+          ITEMS
+        </a>
+
+        <a href="#store">
+          STORE
+        </a>
+
+        <a href="#social">
+          SOCIAL
+        </a>
+
+      </nav>
+
+
+      <a
+        href="#store"
+        class="header-store-button"
+      >
+
+        <span>
+          ONLINE STORE
+        </span>
+
+        <i>
+          ↘
+        </i>
+
+      </a>
+
+
+      <button
+        type="button"
+        class="menu-button"
+        id="menuButton"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-decoration mobile-menu-moon">
+      ☾
+    </div>
+
+    <div class="mobile-menu-inner">
+
+      <p class="mobile-menu-label">
+        MENU
+      </p>
+
+      <nav>
+
+        <a href="#home">
+          HOME
+        </a>
+
+        <a href="#about">
+          ABOUT
+        </a>
+
+        <a href="#collection">
+          COLLECTION
+        </a>
+
+        <a href="#items">
+          ITEMS
+        </a>
+
+        <a href="#store">
+          STORE
+        </a>
+
+        <a href="#social">
+          SOCIAL
+        </a>
+
+      </nav>
+
+
+      <div class="mobile-menu-bottom">
+
+        <span>
+          FOR THOSE WHO LOVE QUIET NIGHTS.
+        </span>
+
+        <span>
+          ✦
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <main>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="hero-orbit orbit-one"></div>
+
+      <div class="hero-orbit orbit-two"></div>
+
+      <div class="hero-glow"></div>
+
+
+      <div class="hero-inner">
+
+        <p
+          class="hero-overline reveal"
+          data-delay="0"
+        >
+          APPAREL / GOODS / DIGITAL / LIFESTYLE
+        </p>
+
+
+        <div
+          class="hero-image-frame reveal"
+          data-delay="100"
+          id="heroFrame"
+        >
+
+          <div class="hero-image-light"></div>
+
+          <img
+            src="images/header01.png"
+            alt="NOCTAIL"
+            class="hero-image"
+            id="heroImage"
+          >
+
+          <div class="hero-frame-corner corner-tl"></div>
+          <div class="hero-frame-corner corner-tr"></div>
+          <div class="hero-frame-corner corner-bl"></div>
+          <div class="hero-frame-corner corner-br"></div>
+
+        </div>
+
+
+        <div
+          class="hero-bottom reveal"
+          data-delay="200"
+        >
+
+          <div class="hero-side-info">
+
+            <span>
+              EST.
+            </span>
+
+            <strong>
+              2026
+            </strong>
+
+          </div>
+
+
+          <div class="hero-center-copy">
+
+            <p class="hero-japanese">
+              日常に、少しだけ特別な「好き」を。
+            </p>
+
+            <div class="ornament">
+
+              <span></span>
+
+              <i>
+                ✦
+              </i>
+
+              <span></span>
+
+            </div>
+
+            <p class="hero-tagline">
+              FOR THOSE WHO LOVE QUIET NIGHTS.
+            </p>
+
+          </div>
+
+
+          <div class="hero-side-info right">
+
+            <span>
+              MOON
+            </span>
+
+            <strong>
+              ☾
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a
+        href="#about"
+        class="scroll-guide"
+      >
+
+        <span>
+          SCROLL
+        </span>
+
+        <i></i>
+
+      </a>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section
+      class="section about-section"
+      id="about"
+    >
+
+      <div class="section-decoration-text">
+        NOCTAIL
+      </div>
+
+
+      <div class="container">
+
+        <p class="section-number reveal">
+          01 / ABOUT
+        </p>
+
+
+        <div class="about-grid">
+
+          <div
+            class="about-visual reveal"
+            data-delay="80"
+          >
+
+            <div class="moon-ring moon-ring-one"></div>
+
+            <div class="moon-ring moon-ring-two"></div>
+
+            <div class="moon-ring moon-ring-three"></div>
+
+
+            <div class="about-icon-wrap">
+
+              <img
+                src="images/iconN1.png"
+                alt="NOCTAIL icon"
+              >
+
+            </div>
+
+
+            <div class="about-floating-symbol symbol-one">
+              ✦
+            </div>
+
+            <div class="about-floating-symbol symbol-two">
+              ✧
+            </div>
+
+            <div class="about-floating-symbol symbol-three">
+              ☾
+            </div>
+
+          </div>
+
+
+          <div
+            class="about-copy reveal"
+            data-delay="160"
+          >
+
+            <p class="section-label">
+              ABOUT NOCTAIL
+            </p>
+
+            <h2 class="section-title">
+              A little darkness<br>
+              in your everyday.
+            </h2>
+
+            <p class="about-lead">
+              特別すぎない。<br>
+              でも、少しだけ目を惹く。
+            </p>
+
+            <p class="body-copy">
+              NOCTAIL（ノクテイル）は、
+              「日常に、少しだけ特別な好き」をテーマにした
+              ライフスタイルブランドです。
+            </p>
+
+            <p class="body-copy">
+              夜、月、猫、星、植物、花、蝶などをモチーフに、
+              普段のファッションや生活の中に自然となじむ
+              デザインを制作しています。
+            </p>
+
+            <p class="body-copy">
+              特別な日のためだけではなく、
+              いつもの日常で自然に使いたくなるものを。
+            </p>
+
+
+            <div class="about-signature">
+
+              <span>
+                NOCTAIL
+              </span>
+
+              <small>
+                LIFE WITH A LITTLE DARKNESS.
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BRAND MESSAGE
+    ========================================== -->
+
+    <section class="message-section">
+
+      <div class="message-moon"></div>
+
+      <div class="message-orbit"></div>
+
+
+      <div class="message-inner reveal">
+
+        <p class="message-small">
+          FOR THOSE WHO LOVE QUIET NIGHTS.
+        </p>
+
+        <span class="message-star">
+          ✦
+        </span>
+
+        <h2>
+          QUIET.
+          <br>
+          SIMPLE.
+          <br>
+          YOURS.
+        </h2>
+
+        <p class="message-japanese">
+          静かな夜を、日常のすぐそばに。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         COLLECTION
+    ========================================== -->
+
+    <section
+      class="section collection-section"
+      id="collection"
+    >
+
+      <div class="container">
+
+        <p class="section-number reveal">
+          02 / COLLECTION
+        </p>
+
+
+        <div class="section-heading reveal">
+
+          <div>
+
+            <p class="section-label">
+              COLLECTION
+            </p>
+
+            <h2 class="section-title">
+              Everyday Collection
+            </h2>
+
+          </div>
+
+
+          <p class="section-side-copy">
+            MADE FOR
+            <br>
+            EVERYDAY LIFE.
+          </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+
+          <article
+            class="collection-card reveal magnetic-card"
+            data-delay="0"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="collection-top">
+
+              <span>
+                01
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+            <div class="collection-art">
+
+              <div class="collection-orbit"></div>
+
+              <span class="collection-moon">
+                ☾
+              </span>
+
+              <i class="tiny-star star-a">
+                ✦
+              </i>
+
+              <i class="tiny-star star-b">
+                ✧
+              </i>
+
+            </div>
+
+            <div>
+
+              <p class="collection-type">
+                WEAR
+              </p>
+
+              <h3>
+                APPAREL
+              </h3>
+
+              <p class="collection-description">
+                T-SHIRT / HOODIE / SWEAT / MORE
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="collection-card reveal magnetic-card"
+            data-delay="80"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="collection-top">
+
+              <span>
+                02
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+            <div class="collection-art">
+
+              <div class="collection-orbit reverse"></div>
+
+              <span class="collection-star">
+                ✦
+              </span>
+
+              <i class="tiny-star star-a">
+                ·
+              </i>
+
+              <i class="tiny-star star-b">
+                ✧
+              </i>
+
+            </div>
+
+            <div>
+
+              <p class="collection-type">
+                USE
+              </p>
+
+              <h3>
+                GOODS
+              </h3>
+
+              <p class="collection-description">
+                BAG / STICKER / CASE / DAILY GOODS
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="collection-card reveal magnetic-card"
+            data-delay="160"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="collection-top">
+
+              <span>
+                03
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+            <div class="collection-art">
+
+              <div class="digital-orb">
+
+                <span>
+                  ☽
+                </span>
+
+                <i>
+                  ✦
+                </i>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <p class="collection-type">
+                KEEP
+              </p>
+
+              <h3>
+                DIGITAL
+              </h3>
+
+              <p class="collection-description">
+                WALLPAPER / ICON / DIGITAL ART
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FEATURED ITEMS
+    ========================================== -->
+
+    <section
+      class="section items-section"
+      id="items"
+    >
+
+      <div class="container">
+
+        <p class="section-number reveal">
+          03 / ITEMS
+        </p>
+
+
+        <div class="section-heading reveal">
+
+          <div>
+
+            <p class="section-label">
+              FEATURED ITEMS
+            </p>
+
+            <h2 class="section-title">
+              New & Selected
+            </h2>
+
+          </div>
+
+          <p class="section-side-copy">
+            NEW ITEMS
+            <br>
+            ADDED REGULARLY.
+          </p>
+
+        </div>
+
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         STORE
+    ========================================== -->
+
+    <section
+      class="section store-section"
+      id="store"
+    >
+
+      <div class="container">
+
+        <p class="section-number reveal">
+          04 / ONLINE STORE
+        </p>
+
+
+        <div class="store-heading reveal">
+
+          <p class="section-label">
+            ONLINE STORE
+          </p>
+
+          <h2 class="section-title">
+            Choose your
+            <br>
+            favorite store.
+          </h2>
+
+          <p class="store-lead">
+            NOCTAILの商品は、
+            BASE・BOOTH・SUZURIからご購入いただけます。
+          </p>
+
+        </div>
+
+
+        <div class="store-grid">
+
+
+          <a
+            href="https://noctail.base.shop/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="store-card reveal magnetic-card"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="store-top">
+
+              <span>
+                01
+              </span>
+
+              <span>
+                ONLINE SHOP
+              </span>
+
+            </div>
+
+
+            <div class="store-symbol">
+              ☾
+            </div>
+
+
+            <div class="store-content">
+
+              <h3>
+                BASE
+              </h3>
+
+              <p>
+                NOCTAILの商品をまとめて
+                ご覧いただけるオンラインショップ。
+              </p>
+
+            </div>
+
+
+            <div class="store-bottom">
+
+              <span>
+                VISIT STORE
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://noctail.booth.pm/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="store-card reveal magnetic-card"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="store-top">
+
+              <span>
+                02
+              </span>
+
+              <span>
+                GOODS / DIGITAL
+              </span>
+
+            </div>
+
+
+            <div class="store-symbol">
+              ✦
+            </div>
+
+
+            <div class="store-content">
+
+              <h3>
+                BOOTH
+              </h3>
+
+              <p>
+                グッズ・デジタルアイテムを中心に
+                展開しています。
+              </p>
+
+            </div>
+
+
+            <div class="store-bottom">
+
+              <span>
+                VISIT STORE
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://suzuri.jp/NOCTAIL_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="store-card reveal magnetic-card"
+          >
+
+            <div class="card-shine"></div>
+
+            <div class="store-top">
+
+              <span>
+                03
+              </span>
+
+              <span>
+                APPAREL / GOODS
+              </span>
+
+            </div>
+
+
+            <div class="store-symbol">
+              ☽
+            </div>
+
+
+            <div class="store-content">
+
+              <h3>
+                SUZURI
+              </h3>
+
+              <p>
+                Tシャツ・パーカー・バッグなど、
+                普段使いのアイテムを展開。
+              </p>
+
+            </div>
+
+
+            <div class="store-bottom">
+
+              <span>
+                VISIT STORE
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SOCIAL
+    ========================================== -->
+
+    <section
+      class="section social-section"
+      id="social"
+    >
+
+      <div class="container">
+
+        <p class="section-number reveal">
+          05 / SOCIAL
+        </p>
+
+
+        <div class="section-heading reveal">
+
+          <div>
+
+            <p class="section-label">
+              FOLLOW NOCTAIL
+            </p>
+
+            <h2 class="section-title">
+              Stay connected.
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+          <a
+            href="https://x.com/noctail_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card reveal"
+          >
+
+            <div>
+
+              <span class="social-small">
+                OFFICIAL
+              </span>
+
+              <h3>
+                X
+              </h3>
+
+              <p>
+                @noctail_shop
+              </p>
+
+            </div>
+
+            <span class="social-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="https://www.tiktok.com/@noctail_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card reveal"
+          >
+
+            <div>
+
+              <span class="social-small">
+                OFFICIAL
+              </span>
+
+              <h3>
+                TikTok
+              </h3>
+
+              <p>
+                @noctail_shop
+              </p>
+
+            </div>
+
+            <span class="social-arrow">
+              ↗
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FINAL
+    ========================================== -->
+
+    <section class="final-section">
+
+      <div class="final-orbit"></div>
+
+
+      <div class="final-inner reveal">
+
+        <img
+          src="images/iconN1.png"
+          alt=""
+          class="final-icon"
+        >
+
+        <p>
+          NOCTAIL
+        </p>
+
+        <h2>
+          Find something
+          <br>
+          you love.
+        </h2>
+
+        <span>
+          LIFE WITH A LITTLE DARKNESS.
+        </span>
+
+
+        <a
+          href="#store"
+          class="final-button"
+        >
+
+          <span>
+            ONLINE STORE
+          </span>
+
+          <i>
+            ↓
+          </i>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-top">
+
+      <div class="footer-brand">
+
+        <img
+          src="images/iconN1.png"
+          alt="NOCTAIL"
+        >
+
+        <div>
+
+          <h2>
+            NOCTAIL
+          </h2>
+
+          <p>
+            LIFE WITH A LITTLE DARKNESS.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <span>
+            MENU
+          </span>
+
+          <a href="#about">
+            ABOUT
+          </a>
+
+          <a href="#collection">
+            COLLECTION
+          </a>
+
+          <a href="#items">
+            ITEMS
+          </a>
+
+          <a href="#store">
+            STORE
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            ONLINE STORE
+          </span>
+
+          <a
+            href="https://noctail.base.shop/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BASE
+          </a>
+
+          <a
+            href="https://noctail.booth.pm/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BOOTH
+          </a>
+
+          <a
+            href="https://suzuri.jp/NOCTAIL_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SUZURI
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            SOCIAL
+          </span>
+
+          <a
+            href="https://x.com/noctail_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            X
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@noctail_shop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TikTok
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        日常に、少しだけ特別な「好き」を。
+      </p>
+
+      <p>
+        © <span id="currentYear"></span> NOCTAIL
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
