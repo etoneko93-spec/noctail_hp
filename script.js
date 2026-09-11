@@ -10,97 +10,29 @@
 const SHOP_LINKS = {
 
   booth: {
-
-    name:
-      "BOOTH",
-
-    url:
-      "https://noctail.booth.pm/"
-
+    name: "BOOTH",
+    url: "https://noctail.booth.pm/"
   },
-
 
   suzuri: {
-
-    name:
-      "SUZURI",
-
-    url:
-      "https://suzuri.jp/NOCTAIL_shop"
-
+    name: "SUZURI",
+    url: "https://suzuri.jp/NOCTAIL_shop"
   },
 
-
   tshirtTrinity: {
-
-    name:
-      "Tシャツトリニティ",
-
-    url:
-      "https://www.ttrinity.jp/shop/noctail/"
-
+    name: "Tシャツトリニティ",
+    url: "https://www.ttrinity.jp/shop/noctail/"
   }
 
 };
 
 
 /* =========================================================
-   INFORMATION / NEWS
+   NEWS
 ========================================================= */
 
-const NEWS = [
-
-  {
-
-    date:
-      "2026.09.12",
-
-    category:
-      "SITE",
-
-    title:
-      "NOCTAIL公式サイトを更新しました。",
-
-    url:
-      ""
-
-  },
-
-
-  {
-
-    date:
-      "2026.09",
-
-    category:
-      "SHOP",
-
-    title:
-      "BOOTH・SUZURIにてNOCTAILアイテムを販売中です。",
-
-    url:
-      ""
-
-  },
-
-
-  {
-
-    date:
-      "2026.09",
-
-    category:
-      "SHOP",
-
-    title:
-      "Tシャツトリニティでの販売を開始しました。",
-
-    url:
-      "https://www.ttrinity.jp/shop/noctail/"
-
-  }
-
-];
+const NEWS =
+  window.NOCTAIL_NEWS || [];
 
 
 /* =========================================================
@@ -411,104 +343,23 @@ function setupShopLinks() {
 
 
       if (
-        !shop
+        !shop ||
+        !shop.url
       ) {
         return;
       }
 
 
-      if (
-        shop.url
-      ) {
-
-        link.href =
-          shop.url;
+      link.href =
+        shop.url;
 
 
-        link.target =
-          "_blank";
+      link.target =
+        "_blank";
 
 
-        link.rel =
-          "noopener noreferrer";
-
-
-        link.classList.remove(
-          "store-pending"
-        );
-
-
-        link.classList.remove(
-          "store-link-pending"
-        );
-
-
-        const action =
-          link.querySelector(
-            ".store-action"
-          );
-
-
-        if (
-          action
-        ) {
-
-          action.textContent =
-            "VISIT STORE";
-
-        }
-
-      } else {
-
-        link.href =
-          "#";
-
-
-        if (
-          link.classList.contains(
-            "store-card"
-          )
-        ) {
-
-          link.classList.add(
-            "store-pending"
-          );
-
-        } else {
-
-          link.classList.add(
-            "store-link-pending"
-          );
-
-        }
-
-
-        const action =
-          link.querySelector(
-            ".store-action"
-          );
-
-
-        if (
-          action
-        ) {
-
-          action.textContent =
-            "COMING SOON";
-
-        }
-
-
-        link.addEventListener(
-          "click",
-          event => {
-
-            event.preventDefault();
-
-          }
-        );
-
-      }
+      link.rel =
+        "noopener noreferrer";
 
     }
   );
@@ -565,8 +416,7 @@ window.addEventListener(
   "scroll",
   updateHeader,
   {
-    passive:
-      true
+    passive: true
   }
 );
 
@@ -621,8 +471,7 @@ window.addEventListener(
   "scroll",
   updateProgress,
   {
-    passive:
-      true
+    passive: true
   }
 );
 
@@ -862,13 +711,10 @@ function setupReveal() {
       },
 
       {
-
-        threshold:
-          .10,
+        threshold: .10,
 
         rootMargin:
           "0px 0px -35px 0px"
-
       }
 
     );
@@ -929,8 +775,7 @@ window.addEventListener(
 
   },
   {
-    passive:
-      true
+    passive: true
   }
 );
 
@@ -976,7 +821,7 @@ animateCursor();
 
 
 /* =========================================================
-   HERO MOUSE PARALLAX
+   HERO PARALLAX
 ========================================================= */
 
 const heroFrame =
@@ -1173,13 +1018,11 @@ document
 
           target.scrollIntoView(
             {
-
               behavior:
                 "smooth",
 
               block:
                 "start"
-
             }
           );
 
