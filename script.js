@@ -4,133 +4,103 @@
 
 
 /* =========================================================
-   PRODUCTS
+   ONLINE STORE
 ========================================================= */
 
-const PRODUCTS = [
+const SHOP_LINKS = {
+
+  booth: {
+
+    name:
+      "BOOTH",
+
+    url:
+      "https://noctail.booth.pm/"
+
+  },
+
+
+  suzuri: {
+
+    name:
+      "SUZURI",
+
+    url:
+      "https://suzuri.jp/NOCTAIL_shop"
+
+  },
+
+
+  tshirtTrinity: {
+
+    name:
+      "Tシャツトリニティ",
+
+    url:
+      "https://www.ttrinity.jp/shop/noctail/"
+
+  }
+
+};
+
+
+/* =========================================================
+   INFORMATION / NEWS
+========================================================= */
+
+const NEWS = [
 
   {
 
-    id:
-      "moon-cat-tshirt",
+    date:
+      "2026.09.12",
 
     category:
-      "APPAREL",
+      "SITE",
 
-    name:
-      "MOON CAT T-SHIRT",
+    title:
+      "NOCTAIL公式サイトを更新しました。",
 
-    price:
-      "COMING SOON",
-
-    image:
-      "",
-
-    symbol:
-      "☾",
-
-    links: {
-
-      base:
-        "",
-
-      booth:
-        "",
-
-      suzuri:
-        ""
-
-    }
+    url:
+      ""
 
   },
 
 
   {
 
-    id:
-      "quiet-night-tshirt",
+    date:
+      "2026.09",
 
     category:
-      "APPAREL",
+      "SHOP",
 
-    name:
-      "QUIET NIGHT T-SHIRT",
+    title:
+      "BOOTH・SUZURIにてNOCTAILアイテムを販売中です。",
 
-    price:
-      "COMING SOON",
-
-    image:
-      "",
-
-    symbol:
-      "✦",
-
-    links: {
-
-      base:
-        "",
-
-      booth:
-        "",
-
-      suzuri:
-        ""
-
-    }
+    url:
+      ""
 
   },
 
 
   {
 
-    id:
-      "noctail-wallpaper",
+    date:
+      "2026.09",
 
     category:
-      "DIGITAL",
+      "SHOP",
 
-    name:
-      "NOCTAIL WALLPAPER",
+    title:
+      "Tシャツトリニティでの販売を開始しました。",
 
-    price:
-      "COMING SOON",
-
-    image:
-      "",
-
-    symbol:
-      "☽",
-
-    links: {
-
-      base:
-        "",
-
-      booth:
-        "",
-
-      suzuri:
-        ""
-
-    }
+    url:
+      "https://www.ttrinity.jp/shop/noctail/"
 
   }
 
 ];
-
-
-const STORE_NAMES = {
-
-  base:
-    "BASE",
-
-  booth:
-    "BOOTH",
-
-  suzuri:
-    "SUZURI"
-
-};
 
 
 /* =========================================================
@@ -258,258 +228,151 @@ createStars();
 
 
 /* =========================================================
-   PRODUCT RENDER
+   NEWS RENDER
 ========================================================= */
 
-const productGrid =
+const newsList =
   document.getElementById(
-    "productGrid"
+    "newsList"
   );
 
 
-function createProductCard(
-  product
+function createNewsItem(
+  news
 ) {
 
-  const card =
+  const item =
     document.createElement(
-      "article"
+      news.url
+        ? "a"
+        : "div"
     );
 
 
-  card.className =
-    "product-card reveal";
-
-
-  /* visual */
-
-  const visual =
-    document.createElement(
-      "div"
-    );
-
-
-  visual.className =
-    "product-visual";
+  item.className =
+    "news-item reveal";
 
 
   if (
-    product.image
+    news.url
   ) {
 
-    const image =
-      document.createElement(
-        "img"
-      );
+    item.href =
+      news.url;
 
 
-    image.src =
-      product.image;
+    item.target =
+      "_blank";
 
 
-    image.alt =
-      product.name;
-
-
-    image.loading =
-      "lazy";
-
-
-    visual.appendChild(
-      image
-    );
-
-  } else {
-
-    visual.innerHTML =
-      `
-
-        <div class="product-placeholder">
-
-          <span>
-            ${product.symbol || "✦"}
-          </span>
-
-          <small>
-            NOCTAIL
-          </small>
-
-        </div>
-
-      `;
+    item.rel =
+      "noopener noreferrer";
 
   }
 
 
-  /* info */
-
-  const info =
+  const date =
     document.createElement(
-      "div"
+      "time"
     );
 
 
-  info.className =
-    "product-info";
+  date.className =
+    "news-date";
+
+
+  date.textContent =
+    news.date;
 
 
   const category =
     document.createElement(
-      "p"
+      "span"
     );
 
 
   category.className =
-    "product-category";
+    "news-category";
 
 
   category.textContent =
-    product.category;
+    news.category;
 
 
   const title =
-    document.createElement(
-      "h3"
-    );
-
-
-  title.className =
-    "product-name";
-
-
-  title.textContent =
-    product.name;
-
-
-  const price =
     document.createElement(
       "p"
     );
 
 
-  price.className =
-    "product-price";
+  title.className =
+    "news-title";
 
 
-  price.textContent =
-    product.price;
+  title.textContent =
+    news.title;
 
 
-  const links =
+  const arrow =
     document.createElement(
-      "div"
+      "span"
     );
 
 
-  links.className =
-    "product-links";
+  arrow.className =
+    "news-arrow";
 
 
-  Object
-    .entries(
-      product.links
-    )
-    .forEach(
-      (
-        [
-          store,
-          url
-        ]
-      ) => {
-
-        if (
-          !url
-        ) {
-          return;
-        }
+  arrow.textContent =
+    news.url
+      ? "↗"
+      : "✦";
 
 
-        const button =
-          document.createElement(
-            "a"
-          );
+  item.appendChild(
+    date
+  );
 
 
-        button.href =
-          url;
-
-
-        button.target =
-          "_blank";
-
-
-        button.rel =
-          "noopener noreferrer";
-
-
-        button.textContent =
-          STORE_NAMES[
-            store
-          ] || store;
-
-
-        links.appendChild(
-          button
-        );
-
-      }
-    );
-
-
-  info.appendChild(
+  item.appendChild(
     category
   );
 
 
-  info.appendChild(
+  item.appendChild(
     title
   );
 
 
-  info.appendChild(
-    price
+  item.appendChild(
+    arrow
   );
 
 
-  info.appendChild(
-    links
-  );
-
-
-  card.appendChild(
-    visual
-  );
-
-
-  card.appendChild(
-    info
-  );
-
-
-  return card;
+  return item;
 
 }
 
 
-function renderProducts() {
+function renderNews() {
 
   if (
-    !productGrid
+    !newsList
   ) {
     return;
   }
 
 
-  productGrid.innerHTML =
+  newsList.innerHTML =
     "";
 
 
-  PRODUCTS.forEach(
-    product => {
+  NEWS.forEach(
+    news => {
 
-      productGrid.appendChild(
-        createProductCard(
-          product
+      newsList.appendChild(
+        createNewsItem(
+          news
         )
       );
 
@@ -519,7 +382,141 @@ function renderProducts() {
 }
 
 
-renderProducts();
+renderNews();
+
+
+/* =========================================================
+   SHOP LINKS
+========================================================= */
+
+function setupShopLinks() {
+
+  const links =
+    document.querySelectorAll(
+      "[data-shop]"
+    );
+
+
+  links.forEach(
+    link => {
+
+      const key =
+        link.dataset.shop;
+
+
+      const shop =
+        SHOP_LINKS[
+          key
+        ];
+
+
+      if (
+        !shop
+      ) {
+        return;
+      }
+
+
+      if (
+        shop.url
+      ) {
+
+        link.href =
+          shop.url;
+
+
+        link.target =
+          "_blank";
+
+
+        link.rel =
+          "noopener noreferrer";
+
+
+        link.classList.remove(
+          "store-pending"
+        );
+
+
+        link.classList.remove(
+          "store-link-pending"
+        );
+
+
+        const action =
+          link.querySelector(
+            ".store-action"
+          );
+
+
+        if (
+          action
+        ) {
+
+          action.textContent =
+            "VISIT STORE";
+
+        }
+
+      } else {
+
+        link.href =
+          "#";
+
+
+        if (
+          link.classList.contains(
+            "store-card"
+          )
+        ) {
+
+          link.classList.add(
+            "store-pending"
+          );
+
+        } else {
+
+          link.classList.add(
+            "store-link-pending"
+          );
+
+        }
+
+
+        const action =
+          link.querySelector(
+            ".store-action"
+          );
+
+
+        if (
+          action
+        ) {
+
+          action.textContent =
+            "COMING SOON";
+
+        }
+
+
+        link.addEventListener(
+          "click",
+          event => {
+
+            event.preventDefault();
+
+          }
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+setupShopLinks();
 
 
 /* =========================================================
@@ -628,6 +625,9 @@ window.addEventListener(
       true
   }
 );
+
+
+updateProgress();
 
 
 /* =========================================================
@@ -810,6 +810,7 @@ function setupReveal() {
       }
     );
 
+
     return;
 
   }
@@ -861,11 +862,13 @@ function setupReveal() {
       },
 
       {
+
         threshold:
           .10,
 
         rootMargin:
           "0px 0px -35px 0px"
+
       }
 
     );
@@ -1001,7 +1004,8 @@ if (
     event => {
 
       const rect =
-        heroFrame.getBoundingClientRect();
+        heroFrame
+          .getBoundingClientRect();
 
 
       const x =
@@ -1072,7 +1076,8 @@ if (
         event => {
 
           const rect =
-            card.getBoundingClientRect();
+            card
+              .getBoundingClientRect();
 
 
           const x =
@@ -1168,11 +1173,13 @@ document
 
           target.scrollIntoView(
             {
+
               behavior:
                 "smooth",
 
               block:
                 "start"
+
             }
           );
 
@@ -1253,8 +1260,10 @@ window.addEventListener(
                 );
 
             },
+
             350 +
             index * 140
+
           );
 
         }
@@ -1262,10 +1271,3 @@ window.addEventListener(
 
   }
 );
-
-
-/* =========================================================
-   INITIAL
-========================================================= */
-
-updateProgress();
